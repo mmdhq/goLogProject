@@ -7,7 +7,7 @@ import (
 
 func main() {
 	server := gin.Default()
-	u := &web.UserHander{}
+	u := web.NewUserHander()
 	u.RegisterUserRouter(server)
 	server.Run(":8880")
 }
