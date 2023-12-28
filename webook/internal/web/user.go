@@ -4,14 +4,6 @@ import "github.com/gin-gonic/gin"
 
 type UserHander struct{}
 
-func (u *UserHander) RegisterUserRouter(server *gin.Engine) {
-	ug := server.Group("/user")
-	ug.GET("/profile", u.Profile)
-	ug.POST("/signup", u.SignUp)
-	ug.POST("/signin", u.SignIn)
-	ug.POST("/edit", u.Edit)
-}
-
 func (u *UserHander) SignUp(ctx *gin.Context) {
 	ctx.String(200, "sign up")
 }
